@@ -1,0 +1,10 @@
+// Given the equation BMI = Weight/(Height * Height) we are asked to calculate the BMI based on inputs
+// This takes two inputs and pops them into int and reg registers. Using the reg register as a 'working' 
+// register so that we can preserve the first value (which is the weight) within the int register we 
+// proceed to walk through the equation above and arrive at our solution. 
+
+int = input;
+reg = input;
+reg = reg * reg;
+reg = int/reg;
+output = reg;

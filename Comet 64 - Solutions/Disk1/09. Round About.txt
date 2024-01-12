@@ -1,0 +1,15 @@
+// This will store the full initial value (which is guarenteed to be a decimal number) in the reg register.
+// Next, it will calculate only the integer portion by setting the value of the reg register to the int register (which
+// will truncate the digit to remove the decimal portion). The last operation calculates the decimal portion by subtracting
+// the integer porition from the entire decimal number (ex. 12.4 - 12 = 0.4). We then check the value of that decimal porition
+// for being greater than 0.4. If it is not greater than 0.4 we merely output the integer porition of the intiial input (round down)
+// otherwise we must increment that integer portion by one prior to being output (round up).
+
+reg = input;
+int = reg;
+reg = reg - int;
+check reg > 0.4;
+jump if false: _output;
+int++;
+_output:
+output = int;

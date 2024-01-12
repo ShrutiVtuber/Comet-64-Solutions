@@ -1,0 +1,12 @@
+// This will take two values in succession and pop them from the input stack into int and reg registers
+// respectively. Then, it will check if the value of reg is greater than int. If reg is not greater than 
+// int the value of int is set to reg (which is now acting as our output container). Otherwise reg is left 
+// as is and output with the jump statement directly. 
+
+int = input;
+reg = input;
+check reg > int;
+jump if true: _output_reg;
+reg = int;
+_output_reg:
+output = reg;

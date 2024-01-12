@@ -1,0 +1,8 @@
+// This takes the maximum value (could be anything we desired but the problem asked for 100 hence the 'magick number' of 100) 
+// and (initially) subtracts from it 0 (the default value of the int register).
+// The increment of the int register value will then be subtracted from the maximum value on all subsequent iterations resulting
+// in the desired countdown from maximum value to 0 inclusive.
+
+reg = 100 - int;
+int++;
+output = reg;

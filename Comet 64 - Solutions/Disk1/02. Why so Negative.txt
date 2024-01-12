@@ -1,0 +1,6 @@
+// This will take the input value (which is guarenteed to be negative) and set the int register to the inverse.
+// This works because of the simple mathematical principle that anything multiplied by -1 will be the inverse. 
+// eg. 4 * -1 = -4 or -4 * -1 = 4 ktl.
+
+int = input * -1;
+output = int;

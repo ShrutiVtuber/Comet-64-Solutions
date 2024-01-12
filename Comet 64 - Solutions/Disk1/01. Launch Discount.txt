@@ -1,0 +1,6 @@
+// This will take 80% of the value of input and set the int register to the result. 
+// This works because it takes 80% of the original value which is a more efficient way
+// to calculate the discount of 20% which the query requests from us.
+
+int = input * .8;
+output = int;

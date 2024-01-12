@@ -1,0 +1,13 @@
+// This pops a value from the input stack and checks if it is 0 (the delimiter for each package). If it is not
+// zero then we use the reg register as a working calculator for the sum of each member integer of the package.
+// This process continues until we encounter a zero - indicating the end of the package - at which point we output
+// the running total being held in the reg register and then reset that register to 0 to allow us to begin the next
+// iteration with a new package. The use of the _start flag is required as it creates for us the looping effect.
+
+_start:
+int = input;
+check int = 0;
+reg = reg + int;
+jump if false: _start;
+output = reg;
+reg = 0;

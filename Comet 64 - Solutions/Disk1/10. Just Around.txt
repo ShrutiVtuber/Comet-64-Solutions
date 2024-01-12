@@ -1,0 +1,18 @@
+// This pops a value from the input stack into the reg register. We then set the int register to be equal
+// everything minus the final digit (eg. 104 we will have 10 in the int register for 128 we will have 12
+// in the int register, ktl.). Next we multiply that value by 10 and subtract that result from the initial
+// value held in the reg register to arrive at the final digit of the original number popped from the input
+// stack (eg. 104 -> 10*10 -> 100    104 - 100 = 4 (the final number)). Finally, we check if that final number
+// is greater than 4, and if it is we know we must increment the value stored in the int register by 10 (round
+// up to the next value of 10) (eg. 18 -> 1*10 -> 10   18 - 10 = 8   8 is greater than 4 therefore the next 
+// value of 10 after 18 is 20...10 + 10 = 20. ktl.). 
+
+reg = input;
+int = reg/10;
+int = int * 10;
+reg = reg - int;
+check reg > 4;
+jump if false: _output;
+int = int + 10;
+_output:
+output = int;

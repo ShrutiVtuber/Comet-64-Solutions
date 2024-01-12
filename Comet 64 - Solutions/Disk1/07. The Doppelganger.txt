@@ -1,0 +1,14 @@
+// This one needs to take in account that we must retain the second input value taken in order
+// to compare it to the following input value. This works because we know the first value will
+// have nothing to compare itself to and that int is 0 by default so it will always result in a
+// failed test and therefore the first iteration merely pops the first value from the input stack.
+// The rest is quite simple. It checks if the dates are the same in sequence and if so outputs the 
+// date which is duplicated, otherwise it merely remembers the last date popped from the input stack
+// and begins the next cycle of execution. 
+
+_start:
+reg = input;
+check reg = int;
+int = reg;
+jump if false: _start;
+output = reg;

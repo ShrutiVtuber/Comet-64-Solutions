@@ -1,0 +1,6 @@
+// This is quite simple. It works from the principle that the default value for int register will be
+// 0 and therefore incrementing it by one will give us the results we are after (also taking for guarenteed
+// that the program will automatically cease operation upon reaching the expected number of outputs).
+
+int++;
+outpu8t = int;
